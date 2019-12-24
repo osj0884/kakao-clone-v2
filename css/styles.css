@@ -18,8 +18,3 @@ body {
 a {
   color: inherit;
 }
-
-.nav .nav__list {
-  display: flex;
-  justify-content: space-between;
-}
