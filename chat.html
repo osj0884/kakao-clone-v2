@@ -12,36 +12,38 @@
 
     <title>chat / kakao clone</title>
   </head>
-  <body>
-    <div class="status-bar">
-      <div class="status-bar__column">
-        <span class="status-bar__clock">13:54</span>
+  <body class="chats-body">
+    <div class="header-wrapper">
+      <div class="status-bar">
+        <div class="status-bar__column">
+          <span class="status-bar__clock">13:54</span>
+        </div>
+        <div class="status-bar__column">
+          <i class="fas fa-clock"></i>
+          <i class="fas fa-volume-mute"></i>
+          <i class="fas fa-wifi"></i>
+          <span class="status-bar__battery-level">100%</span>
+          <i class="fas fa-battery-full"></i>
+        </div>
       </div>
-      <div class="status-bar__column">
-        <i class="fas fa-clock"></i>
-        <i class="fas fa-volume-mute"></i>
-        <i class="fas fa-wifi"></i>
-        <span class="status-bar__battery-level">100%</span>
-        <i class="fas fa-battery-full"></i>
-      </div>
+      <header class="header">
+        <div class="header__header-column">
+          <a href="index.html" class="header__back-btn">
+            <i class="fas fa-arrow-left   "></i>
+          </a>
+          <h1 class="header__title">Best friend</h1>
+        </div>
+        <div class="header__header-column">
+          <span class="header__icon">
+            <i class="fas fa-search"></i>
+          </span>
+          <span class="header__icon">
+            <i class="fas fa-bars"></i>
+          </span>
+        </div>
+      </header>
     </div>
-    <header class="header">
-      <div class="header__header-column">
-        <a href="index.html" class="header__back-btn">
-          <i class="fas fa-arrow-left   "></i>
-        </a>
-        <h1 class="header__title">Best friend</h1>
-      </div>
-      <div class="header__header-column">
-        <span class="header__icon">
-          <i class="fas fa-search"></i>
-        </span>
-        <span class="header__icon">
-          <i class="fas fa-bars"></i>
-        </span>
-      </div>
-    </header>
-    <main class="chat">
+    <main class="chat-screen">
       <ul class="chat__messages">
         <span class="chat__timestamp">
           Friday, January 11, 2019
@@ -49,19 +51,33 @@
         <li class="incoming-message message">
           <img src="images/avator.jpg" class="g-avator message__avator" />
           <div class="message__content">
-            <span class="message__author">Best friend</span>
-            <div class="message__bubble">
+            <span class="message__bubble">
               Congrates I love you!
-            </div>
+            </span>
+            <span class="message__author">Best friend</span>
           </div>
-          <span class="message__timestamp"></span>
+        </li>
+        <li class="sent-message message">
+          <div class="message__content">
+            <span class="message__bubble">
+              Thank you see soon!
+            </span>
+          </div>
         </li>
         <li class="incoming-message message">
-          <span class="message__timestamp"></span>
+          <img src="images/avator.jpg" class="g-avator message__avator" />
           <div class="message__content">
-            <div class="message__bubble">
+            <span class="message__bubble">
+              Congrates I love you!
+            </span>
+            <span class="message__author">Best friend</span>
+          </div>
+        </li>
+        <li class="sent-message message">
+          <div class="message__content">
+            <span class="message__bubble">
               Thank you see soon!
-            </div>
+            </span>
           </div>
         </li>
       </ul>
@@ -72,9 +88,9 @@
       </div>
       <div class="chat__write-column">
         <input
+          class="chat__wirte-input"
           type="text"
           placeholder="Send message"
-          class="chat__wirte-input"
         />
       </div>
       <div class="chat__write-column">
